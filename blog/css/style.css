@@ -1,0 +1,278 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+
+/* Import fonts*/
+
+@font-face 
+{
+    font-family: "ultra";
+    src: url('../fonts/serif/ultra-regular.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "roboto" ;
+    src: url('../fonts/sans-serif/roboto-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "roboto" ;
+    src: url('../fonts/sans-serif/lato-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* typography */
+
+p
+{
+    font-family: 'lato', roboto, Arial,;
+}
+
+h1,h2,h3,h4
+{
+    font-family: lato, Helvetica;
+    letter-spacing: 0.0325rem;
+
+}
+h1
+{
+    font-size: 3.1rem;
+    letter-spacing: 0.25rem;
+    transform: rotate(5deg);
+    padding: 1rem 29rem;
+}
+
+.highlight
+{
+    display: inline-block;
+    font-family: 'ultra';
+    border: 1px solid black;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    color: #06382B;
+    background-color: #AFE0D3;
+    border-color: #022018;
+    box-shadow: 5px 5px 4px -1px #022018;
+}
+/* general setup and defaults */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size:16px;
+    margin-right: 1rem;
+    max-width: max-content;
+    
+}
+
+body {
+    margin: 3rem auto;
+    width:95%;
+    min-width:5.25rem;
+    
+    
+}
+
+/* layout */
+header
+{
+    padding: 0.7 rem 0rem 1rem 0rem;
+}
+
+nav
+{
+    margin-top: 3rem;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    margin-top: auto .75rem;
+}
+
+.main-section
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5rem;
+    width: fit-content;
+    
+}
+
+article
+{
+    grid-column: 1 / 2;
+    grid-row: 1;
+
+}
+
+
+aside
+{
+    font-size: .80rem;
+    grid-column: 2/3; 
+    grid-row: 1;
+    border-left: 3px solid;
+    padding-left: .75rem;
+    margin-top: 3rem;
+    margin-left: 20rem;
+    width: min-content fit-content;
+}
+aside p
+{
+    border-bottom: 1px solid;
+    padding-bottom: .5rem;
+}
+
+.expand
+{
+    font-size: .25rem;
+}
+
+button
+{
+    font-size: 3rem;
+    display: inline-block;
+    font-family: 'ultra';
+    border: 1px solid black;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    color: #19123a;
+    background-color: #7bb4da;
+    border-color: #1b1b5f;
+    box-shadow: 5px 5px 4px -1px #022018;
+    margin-left: 8rem;
+}
+
+.attribtution
+{
+    font-size: .25rem;
+    margin: .125rem 0rem 0rem 0rem;
+}
+
+
+.subsection 
+{
+    display: flex;
+}
+
+footer
+{
+    font-size: 8px;
+    margin: 1rem 1rem 0rem 0rem
+}
+
+/* images and figures */
+
+img 
+{
+    width: 100%;
+}
+
+
+figure
+{
+    margin: 1rem;
+}
+
+.article-image
+{
+    width: 35%;
+    float: left;
+    margin-right: 1rem;
+    margin-bottom: .5rem
+    ;
+}
+
+.subsection figure
+{
+    margin: 1rem .125rem;
+    background-color: #E0BBAF;
+    
+}
+
+
+/*links and nav */
+a
+{
+    text-decoration: none;
+    border: #022018;
+}
+
+nav a
+{
+    display: inline-block;
+    padding: 2.25rem 3.25rem;
+    font-size: 2rem;
+    font-family: lato;
+    color: #022018;
+}
+
+nav a:focus, nav a:hover
+{
+    color: #fff;
+    background-color: #4D8A7A;
+}
+
+nav a:active
+{
+    color: #fff;
+    background-color: #06382B;
+
+}
